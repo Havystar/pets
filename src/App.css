@@ -25,9 +25,12 @@ body{
     padding: 2rem;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .previewcard{
+    margin: 0.2rem;
     width:45%;
+    height: 12rem;
     border: 1px solid black;
     border-radius: 0.7em
 }
@@ -40,6 +43,9 @@ body{
 }
 .previewcard img{
     width:100%;
+    object-fit: cover;
+    object-position: bottom;
+    height: 50%;
 }
 .select-wrap 
 {
