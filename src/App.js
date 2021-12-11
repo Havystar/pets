@@ -4,6 +4,7 @@ import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
+import { AddItem } from './pages/AddItem';
 
 
 export function App() {
@@ -15,6 +16,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="additem" element={<AddItem/>}/>
         </Routes>
 
       </header>

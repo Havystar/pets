@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #FDFBF8;
+}
+.searchbar{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+}
+.serchbar-input{
+    width:80vw;
+    height: 2rem;
+    padding: 0.2rem 1rem;
+    border-radius: 0.7em;
+    border: 1px solid black
+}
+
+.items{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.previewcard{
+    width:45%;
+    border: 1px solid black;
+    border-radius: 7% 7%;
+}
+.previewcard div{
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 0.5rem; 
+}
+.previewcard img{
+    width:100%;
+}
