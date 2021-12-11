@@ -9,7 +9,7 @@ export function Home() {
             <Searchbar></Searchbar>
 
             <div className='items'><PreviewCard></PreviewCard>
-            <PreviewCard></PreviewCard></div>
+                <PreviewCard></PreviewCard></div>
 
         </div>
     );
