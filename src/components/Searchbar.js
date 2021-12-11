@@ -1,25 +1,25 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
-export function Searchbar(){
-    const [item,setItem] = useState(''); 
+export function Searchbar() {
+    const [item, setItem] = useState('');
 
     const onSubmit = e => {
         e.preventDefault();
         submitSearch(item);
         setItem("")
     }
-    const submitSearch = ()=>{
+    const submitSearch = () => {
         console.log("Searched for", item)
     }
-    return(
+    return (
         <div class="searchbar">
 
             <form onSubmit={onSubmit}>
-                <input 
+                <input
                     class="serchbar-input"
-                    type="text" 
-                    name="Search" 
-                    placeholder="Szukaj" 
+                    type="text"
+                    name="Search"
+                    placeholder="Szukaj"
                     value={item}
                     onChange={e => setItem(e.target.value)}>
                 </input>

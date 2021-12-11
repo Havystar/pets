@@ -4,6 +4,9 @@
 body{
     background-color: #FDFBF8;
 }
+.dnone{
+    display: none;
+}
 .searchbar{
     display:flex;
     align-items:center;
@@ -26,7 +29,7 @@ body{
 .previewcard{
     width:45%;
     border: 1px solid black;
-    border-radius: 7% 7%;
+    border-radius: 0.7em
 }
 .previewcard div{
     border-top: 1px solid black;
@@ -37,4 +40,61 @@ body{
 }
 .previewcard img{
     width:100%;
+}
+.select-wrap 
+{
+    border: 1px solid #303030;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 0 5px 5px;
+    width:100px;
+    background-color:#fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width:90%;
+    white-space:nowrap;
+}
+
+.select-wrap label
+{
+    font-size:10px;
+    text-transform:capitalize;
+    color: #303030;
+    margin: 0;
+    padding: 0.2rem;}
+.select-wrap :-webkit-any(input,textarea,select)
+{
+    background-color: #fff;
+    border:0px;
+    width: 100%;
+    }
+.select-wrap:-moz-any(input,textarea,select){
+    background-color: #fff;
+    color:#303030;
+    border:0px;
+    width: 100%;
+}
+
+.addItem>form>input{
+    width:80%;
+    background-color: #fff;
+    color:#303030;
+    border: 1px solid #303030;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    
+}
+.addItem>form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.addItem header{
+    text-align: center;
+}
+.addItem button{
+    background-color: #FDFBF8;
+    border: none;
 }
