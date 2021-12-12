@@ -4,7 +4,7 @@ import React from 'react';
 export function AddItem() {
   return (
     <div className="addItem">
-      <button>Anuluj</button>
+      <button><a href="/">Anuluj</a></button>
       <header>
         <h3>Dodaj Przedmiot</h3>
       </header>

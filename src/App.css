@@ -1,8 +1,11 @@
 *{
     box-sizing: border-box;
+    color:#3B2812
 }
+
 body{
-    background-color: #FDFBF8;
+
+    background-color: #EDE8DC;
 }
 .dnone{
     display: none;
@@ -14,42 +17,55 @@ body{
     width: 100%;
 }
 .serchbar-input{
-    width:80vw;
-    height: 2rem;
+    font-size: 1.7rem;
+    width:70vw;
+    background: #EDE8DC;
     padding: 0.2rem 1rem;
     border-radius: 0.7em;
-    border: 1px solid black
+    border: 2px solid #3B2812
 }
 
 .items{
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 .previewcard{
     margin: 0.2rem;
-    width:45%;
+    width: 10%;
     height: 12rem;
-    border: 1px solid black;
-    border-radius: 0.7em
-}
-.previewcard div{
-    border-top: 1px solid black;
+    border: 2px solid #3B2812;
+    border-radius: 0.7em;
     display: flex;
     flex-direction: column;
+    justify-content:stretch;
+    overflow: hidden;
+    background: #fff;
+}
+.previewcard div{
+    border-top: 1px solid #303030;
+    background: #44311C;
+   
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     justify-content: space-evenly;
     padding: 0 0.5rem; 
+    height:5rem
+}
+.previewcard p{
+    color:#FDFBF8;
 }
 .previewcard img{
+    display: block;
+    margin: auto;
     width:100%;
-    object-fit: cover;
-    object-position: bottom;
-    height: 50%;
+    overflow: hidden;
 }
 .select-wrap 
 {
-    border: 1px solid #303030;
+    border: 1px solid #3B2812;
     border-radius: 4px;
     margin-bottom: 10px;
     padding: 0 5px 5px;
@@ -65,7 +81,7 @@ body{
 
 .select-wrap label
 {
-    font-size:10px;
+    font-size:1rem;
     text-transform:capitalize;
     color: #303030;
     margin: 0;
@@ -82,6 +98,13 @@ body{
     border:0px;
     width: 100%;
 }
+.addItem{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+}
 
 .addItem>form>input{
     width:80%;
@@ -93,14 +116,178 @@ body{
     
 }
 .addItem>form{
+    padding-bottom: 2rem;
+    height: 90vh;
+    max-height: 600px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+   
 }
 .addItem header{
     text-align: center;
 }
 .addItem button{
-    background-color: #FDFBF8;
+    position: absolute;
+    top:0.4rem;
+    left:0.4rem;
+    background-color: #EDE8DC;
     border: none;
+}
+.burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #3b2812;
+    width: auto;
+    height: 100vh;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+}
+.hidden{
+transform: translateX(-100%);
+}
+.shown{
+transform: translateX(0)
+}
+.burger a {
+  width: 100%;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: #e1dccf;
+  text-decoration: none;
+  transition: color 0.3s linear;
+  background-color: #44311C;
+  margin: 0;
+  transition: 0.3s;
+}
+.burger a:hover{
+    background: #3b2812;
+    color: #e1dccf;
+}
+.burger hr{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 500px) {
+    .burger{
+       width: 100vw;
+    }
+    .burger .a{
+       font-size: 1.5rem;
+       text-align: center;
+     
+    }
+    .previewcard{
+        width:45%;
+    }
+    .categories .list{
+        overflow-x: scroll;
+        justify-content: start;
+    }
+   }
+   
+
+  a:hover {
+    color: #000000
+  }
+a{
+    color:#303030;
+    background: none;
+}
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+.burgerToggle{
+  position:fixed;
+  top: 0.6rem;
+  left: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  
+  
+}
+.burgerToggle:focus {
+    outline: none;
+  }
+.burgerToggle div {
+    width: 2rem;
+    height: 0.25rem;
+    background: #000000;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    opacity: 1;
+  }
+.burgerTrue :first-child{
+    transform: rotate(45deg)
+}
+.burgerTrue :nth-child(2){
+    opacity: 0;
+    transform: translateX(20px);
+}
+.burgerTrue :nth-child(3){
+    transform: rotate(-45deg);
+}
+.burgerTrue div{
+    background-color: #FDFBF8;
+}
+.svg{
+    padding:1rem;
+    position: absolute;
+    top:1.4rem
+}
+.categories .header{
+    display: flex;
+    
+}
+.categories .header :-webkit-any(h3,h5){
+    padding: 0 0.5rem 0 0;
+}
+
+.categories :-webkit-any(.list,.header){
+    display:flex;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    
+}
+
+.categories .category{
+    padding: 0 1rem;
+}
+.categories .list{
+    overflow-x: scroll;
+    justify-content: start;
+}
+.category img{
+    width:100px;
+    height: 100px;
+    border-radius: 100px;
+    border:2px solid #44311C
 }
