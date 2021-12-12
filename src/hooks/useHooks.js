@@ -6,4 +6,10 @@ export function useBurgerToggle() {
         { open, setOpen }
     )
 }
+export function useListing() {
+    const [listing, setListing] = useState(null);
+    return (
+        { listing, setListing }
+    )
+}
 

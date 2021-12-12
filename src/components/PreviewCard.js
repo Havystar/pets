@@ -1,9 +1,11 @@
 import React from 'react'
 
-export function PreviewCard({ img = "", title = "", price = "" }) {
+export function PreviewCard({ e, setListing }) {
+    console.log(e)
+    let { img, title, price } = e.preview;
     console.log(img, title, price)
     return (
-        <div class="previewcard">
+        <div class="previewcard" onClick={() => setListing(e)}>
             <img src={img} alt="pet food"></img>
             <div>
                 <p>{title}</p>

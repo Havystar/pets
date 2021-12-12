@@ -291,3 +291,47 @@ a.nostyle:visited {
     border-radius: 100px;
     border:2px solid #44311C
 }
+.Listing{
+    padding-top: 1rem;
+    width: 100%;
+}
+.Listing img{
+ width: 100%;
+}
+.Listing div {
+    margin: 0;
+    padding: 0.5rem;
+    background: #44311C;
+}
+.Listing div *{
+    padding: 0.5rem;
+    margin: 0;
+    color: #FDFBF8;
+}
+.Listing span{
+    color: #FDFBF8;
+    display:flex;
+    justify-content: space-between;
+
+}
+.exit{
+    position:fixed;
+    top: 0.6rem;
+    right: 0.6rem;
+}
+.exit div{
+    width: 2rem;
+    height: 0.25rem;
+    background: #000000;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    opacity: 1
+}
+.exit :first-child{
+    transform: rotate(45deg)
+}
+.exit :nth-child(2){
+    transform: translateY(1.1rem)rotate(-45deg);
+}

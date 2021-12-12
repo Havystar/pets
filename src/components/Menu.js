@@ -207,7 +207,7 @@ export function Menu({ open = false }) {
             </a>
             <hr />
             <a href="/profile">
-                Mój profile
+                Mój profil
             </a>
             <hr />
             <a href="/">
